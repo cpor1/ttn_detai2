@@ -18,12 +18,28 @@ namespace TTNhom
 		private bool isCollapsed3 = true;
 		private bool isCollapsed4 = true;
 		private bool isCollapsed5 = true;
+
+		private void init()
+		{
+			labelUsernameHeader.Text = "Hello, " + LoginForm.Username +" !";
+			buttonUser.Text = "Wellcome " + LoginForm.Username + " !";
+		}
+
 		public MainForm()
         {
             InitializeComponent();
-        }
+			init();
 
-        private void timer1_Tick(object sender, EventArgs e)
+		}
+
+		private void AddForm(Form f)
+		{
+			f.MdiParent = this;
+			groupBoxMain.Controls.Add(f);
+			f.Show();
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
         {
 			if (isCollapsed)
 			{
@@ -166,6 +182,76 @@ namespace TTNhom
 		private void buttonTimeTable_Click(object sender, EventArgs e)
 		{
 			timer5.Start();
+		}
+
+		private void buttonAddTeacher_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			AddTeacherForm form = new AddTeacherForm();
+			AddForm(form);
+		}
+
+		private void buttonListTeacher_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			ListTeacher form = new ListTeacher();
+			AddForm(form);
+		}
+
+		private void buttonAddStudent_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			AddStudentForm form = new AddStudentForm();
+			AddForm(form);
+		}
+
+		private void buttonListStudent_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			ListStudentForm form = new ListStudentForm();
+			AddForm(form);
+		}
+
+		private void buttonAddSubject_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			AddSubjectForm form = new AddSubjectForm();
+			AddForm(form);
+		}
+
+		private void buttonListSubject_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			ListSubjectForm form = new ListSubjectForm();
+			AddForm(form);
+		}
+
+		private void buttonAddClass_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			AddClassForm form = new AddClassForm();
+			AddForm(form);
+		}
+
+		private void buttonListClass_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			ListClassForm form = new ListClassForm();
+			AddForm(form);
+		}
+
+		private void buttonAddTimeTable_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			AddTimeTableForm form = new AddTimeTableForm();
+			AddForm(form);
+		}
+
+		private void buttonListTimeTable_Click(object sender, EventArgs e)
+		{
+			groupBoxMain.Controls.Clear();
+			ListTimeTableForm form = new ListTimeTableForm();
+			AddForm(form);
 		}
 	}
 }

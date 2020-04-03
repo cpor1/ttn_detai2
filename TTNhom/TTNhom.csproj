@@ -46,6 +46,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClassForm.Designer.cs">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubjectForm.Designer.cs">
+      <DependentUpon>AddSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacherForm.Designer.cs">
+      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTimeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTimeTableForm.Designer.cs">
+      <DependentUpon>AddTimeTableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBAccess.cs" />
+    <Compile Include="ListClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListClassForm.Designer.cs">
+      <DependentUpon>ListClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListStudentForm.Designer.cs">
+      <DependentUpon>ListStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListSubjectForm.Designer.cs">
+      <DependentUpon>ListSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTeacher.Designer.cs">
+      <DependentUpon>ListTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTimeTableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTimeTableForm.Designer.cs">
+      <DependentUpon>ListTimeTableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +121,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddClassForm.resx">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubjectForm.resx">
+      <DependentUpon>AddSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacherForm.resx">
+      <DependentUpon>AddTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTimeTableForm.resx">
+      <DependentUpon>AddTimeTableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListClassForm.resx">
+      <DependentUpon>ListClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListStudentForm.resx">
+      <DependentUpon>ListStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListSubjectForm.resx">
+      <DependentUpon>ListSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTeacher.resx">
+      <DependentUpon>ListTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTimeTableForm.resx">
+      <DependentUpon>ListTimeTableForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
