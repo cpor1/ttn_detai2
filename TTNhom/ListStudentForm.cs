@@ -142,8 +142,9 @@ namespace TTNhom
             addComboBox(conn, cmd, list, "id", "classes", cbMaLop);
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            
-            
+            table = new DataTable();
+            string query = "Select * From Students";
+            GetData(query, dataGridView1, table);
         }
         private void addComboBox(SqlConnection conn, SqlCommand cmd, List<string> list, string tenCot, string tenTable, ComboBox cb)
         {
