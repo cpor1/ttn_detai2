@@ -51,6 +51,7 @@ namespace TTNhom
                 if (gioiTinh.Equals("True")) radioButtonNam.Checked = true;
                 else radioButtonNu.Checked = true;
                 cbMaLop.SelectedIndex = cbMaLop.FindStringExact(maLop.ToString());
+               // MessageBox.Show(maHS.ToString());
             }
             catch
             {
@@ -83,8 +84,10 @@ namespace TTNhom
             else
             {
                 table = new DataTable();
-                string query = "delete students where id = '" + maHS + "'";
-                GetData(query, dataGridView1, table);
+                string query1 = "DELETE dbo.student_subject_score WHERE student_id = '"+maHS+"'";
+                string query2 = "DELETE dbo.students WHERE id = '" + maHS + "'";
+                GetData(query1, dataGridView1, table);
+                GetData(query2, dataGridView1, table);
                 GetData("select * from students", dataGridView1, table);
                 MessageBox.Show("Done");
 
@@ -118,7 +121,7 @@ namespace TTNhom
             else
             {
                 string query = "UPDATE dbo.students SET " +
-                    "name = N'"+ten+"' , sex = '"+int.Parse(gioiTinh)+"', dob = '"+ngaySinh+"', address = N'"+diaChi+"', parent_phone_number = N'"+phone+"', parent_email = N'"+email+"', class_id = '"+int.Parse(maLop)+"' " +
+                    "student_name = N'"+ten+"' , sex = '"+int.Parse(gioiTinh)+"', dob = '"+ngaySinh+"', address = N'"+diaChi+"', parent_phone_number = N'"+phone+"', parent_email = N'"+email+"', class_id = '"+int.Parse(maLop)+"' " +
                     "WHERE id = '"+maHS+"'  ";
                 GetData(query, dataGridView1, table);
                 GetData("select * from Students", dataGridView1, table);
@@ -143,7 +146,7 @@ namespace TTNhom
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             table = new DataTable();
-            string query = "Select * From Students";
+            string query = "Select * From students";
             GetData(query, dataGridView1, table);
         }
         private void addComboBox(SqlConnection conn, SqlCommand cmd, List<string> list, string tenCot, string tenTable, ComboBox cb)
@@ -174,7 +177,7 @@ namespace TTNhom
             string key = txtKeySearch.Text.Trim();
             if (key.Equals(""))
             {
-                string query = "Select * From Students";
+                string query = "Select * From students";
                 GetData(query, dataGridView1, table);
             }
             else
@@ -188,7 +191,7 @@ namespace TTNhom
                 }
                 else
                 {
-                    string query = "SELECT * FROM dbo.students WHERE name LIKE N'%" + key + "%' OR address LIKE N'%" + key + "%' " +
+                    string query = "SELECT * FROM dbo.students WHERE student_name LIKE N'%" + key + "%' OR address LIKE N'%" + key + "%' " +
                     "OR parent_phone_number LIKE N'%" + key + "%' OR parent_email LIKE N'%" + key + "%'  ";
                     GetData(query, dataGridView1, table);
                 }

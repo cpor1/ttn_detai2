@@ -35,8 +35,8 @@ namespace TTNhom
         private void FormDiem_Load(object sender, EventArgs e)
         {
             table = new DataTable();
-            string query = "SELECT sb.name AS 'Ten Mon Hoc', sss.first_test_score,sss.middle_test_score,sss.final_test_score,sss.grade FROM dbo.student_subject_score AS sss, dbo.subjects AS sb " +
-                "WHERE sss.subject_id = sb.id AND sss.student_id = '"+maHS+"'";
+            string query = "SELECT sub.subject_name,sss.first_test_score,sss.middle_test_score,sss.final_test_score,sss.grade FROM dbo.student_subject_score AS sss, dbo.subjects AS sub , dbo.students AS stu" +
+                " WHERE sss.student_id = stu.id AND sss.subject_id = sub.id AND stu.id = '"+maHS+"'";
             GetData(query, dataGridView1, table);
         }
     }

@@ -85,7 +85,7 @@ namespace TTNhom
                 {
                     conn.Open();
                     table = new DataTable();
-                    string queryInsert = "INSERT dbo.students( name ,sex ,dob ,address ,parent_phone_number ,parent_email ,class_id)VALUES" +
+                    string queryInsert = "INSERT dbo.students( student_name ,sex ,dob ,address ,parent_phone_number ,parent_email ,class_id)VALUES" +
                         "  ( N'" + ten + "' ,'" + gioiTinh + "' ,'" + ngaySinh + "' ,N'" + diaChi + "' ,N'" + phone + "' ,N'" + email + "' , '" + maLop + "'  )";
                     cmd = new SqlCommand(queryInsert, conn);
                     cmd.CommandType = CommandType.Text;
