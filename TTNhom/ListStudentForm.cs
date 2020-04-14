@@ -25,13 +25,12 @@ namespace TTNhom
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
+
                 int index = e.RowIndex;
                 DataGridViewRow selectRow = dataGridView1.Rows[index];
                 ten = selectRow.Cells[1].Value.ToString();
 
-                gioiTinh = (selectRow.Cells[2].Value.ToString());
+                gioiTinh = selectRow.Cells[2].Value.ToString();
                 ngaySinh = selectRow.Cells[3].Value.ToString();
                 diaChi = selectRow.Cells[4].Value.ToString();
                 phone = selectRow.Cells[5].Value.ToString();
@@ -39,25 +38,16 @@ namespace TTNhom
                 maLop = selectRow.Cells[7].Value.ToString();
                 maHS = int.Parse(selectRow.Cells[0].Value.ToString());
 
-                string result = chuanHoaNgaySinh(ngaySinh);
-                string[] data = result.Split('-');
 
                 txtTen.Text = ten;
                 txtDiaChi.Text = diaChi;
                 txtEmail.Text = email;
                 txtPhone.Text = phone;
-                dateTimePicker1.Value = new DateTime(int.Parse(data[0]), int.Parse(data[1]), int.Parse(data[2]));
+                dateTimePicker1.Value = Convert.ToDateTime(ngaySinh);
 
                 if (gioiTinh.Equals("True")) radioButtonNam.Checked = true;
                 else radioButtonNu.Checked = true;
                 cbMaLop.SelectedIndex = cbMaLop.FindStringExact(maLop.ToString());
-               // MessageBox.Show(maHS.ToString());
-            }
-            catch
-            {
-
-            }
-            
         }
 
         private void BtnXemDiem_Click(object sender, EventArgs e)
@@ -95,11 +85,29 @@ namespace TTNhom
             
         }
 
+        private void txtKeySearch_TextChanged(object sender, EventArgs e)
+        {
+            string key = txtKeySearch.Text;
+            int a;
+            bool check = int.TryParse(key, out a);
+            if (check == true)
+            {
+                string query = "SELECT * FROM dbo.students WHERE  sex = '" + key + "' OR dob LIKE '" + key + "'  OR class_id = '" + key + "' ";
+                GetData(query, dataGridView1, table);
+            }
+            else
+            {
+                string query = "SELECT * FROM dbo.students WHERE student_name LIKE N'%" + key + "%' OR address LIKE N'%" + key + "%' " +
+                "OR parent_phone_number LIKE N'" + key + "' OR parent_email LIKE N'%" + key + "%'  ";
+                GetData(query, dataGridView1, table);
+            }
+        }
+
         private void BtnSua_Click(object sender, EventArgs e)
         {
             table = new DataTable();
             ten = txtTen.Text.Trim();
-            ngaySinh = chuanHoaNgaySinh(dateTimePicker1.Value.ToShortDateString().ToString());
+            ngaySinh = dateTimePicker1.Value.ToShortDateString().ToString();
             diaChi = txtDiaChi.Text;
             phone = txtPhone.Text;
             email = txtEmail.Text;
@@ -128,16 +136,6 @@ namespace TTNhom
                 MessageBox.Show("Done");
             }
         }
-
-        private string chuanHoaNgaySinh(string ngaySinh)
-        {
-            string[] a = ngaySinh.Split(' ');
-            string key = a[0];
-            string[] b = key.Split('/');
-            string result = b[2] + "-" + b[1] + "-" + b[0];
-            return result;
-        }
-
         
         public ListStudentForm()
         {

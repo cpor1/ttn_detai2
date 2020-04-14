@@ -31,7 +31,8 @@ namespace TTNhom
         {
             InitializeComponent();
             addComboBox(conn, cmd, list, "id", "classes", cbMaLop);
-
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "yyyy-MM-dd";
         }
 
         private void addComboBox(SqlConnection conn, SqlCommand cmd, List<string> list, string tenCot, string tenTable, ComboBox cb)
@@ -47,20 +48,12 @@ namespace TTNhom
             conn.Close();
 
         }
-        private string chuanHoaNgaySinh(string ngaySinh)
-        {
-            
-            string[] b = ngaySinh.Split('/');
-            string result = b[2] + "-" + b[1] + "-" + b[0];
-            return result;
-        }
 
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            
             ten = txtTen.Text.Trim();
-            ngaySinh = chuanHoaNgaySinh(dateTimePicker1.Value.ToShortDateString().ToString());
+            ngaySinh = dateTimePicker1.Value.ToShortDateString().ToString();
             diaChi = txtDiaChi.Text;
             phone = txtPhone.Text;
             email = txtEmail.Text;

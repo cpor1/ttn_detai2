@@ -53,6 +53,8 @@
             this.btnXemDiem = new System.Windows.Forms.Button();
             this.picSearch = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
@@ -65,7 +67,7 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(422, 456);
+            this.btnXoa.Location = new System.Drawing.Point(428, 478);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(103, 41);
             this.btnXoa.TabIndex = 78;
@@ -80,7 +82,7 @@
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(141, 456);
+            this.btnSua.Location = new System.Drawing.Point(147, 478);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(103, 41);
             this.btnSua.TabIndex = 77;
@@ -92,7 +94,7 @@
             // 
             this.panel1.Controls.Add(this.radioButtonNu);
             this.panel1.Controls.Add(this.radioButtonNam);
-            this.panel1.Location = new System.Drawing.Point(118, 322);
+            this.panel1.Location = new System.Drawing.Point(124, 344);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 25);
             this.panel1.TabIndex = 69;
@@ -121,7 +123,7 @@
             // 
             // txtTen
             // 
-            this.txtTen.Location = new System.Drawing.Point(118, 295);
+            this.txtTen.Location = new System.Drawing.Point(124, 317);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(167, 20);
             this.txtTen.TabIndex = 67;
@@ -129,7 +131,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 330);
+            this.label4.Location = new System.Drawing.Point(56, 352);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 59;
@@ -138,7 +140,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(50, 298);
+            this.label13.Location = new System.Drawing.Point(56, 320);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(26, 13);
             this.label13.TabIndex = 57;
@@ -149,7 +151,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(53, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 137);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -162,7 +164,7 @@
             // labelTimKiem
             // 
             this.labelTimKiem.AutoSize = true;
-            this.labelTimKiem.Location = new System.Drawing.Point(347, 85);
+            this.labelTimKiem.Location = new System.Drawing.Point(353, 107);
             this.labelTimKiem.Name = "labelTimKiem";
             this.labelTimKiem.Size = new System.Drawing.Size(52, 13);
             this.labelTimKiem.TabIndex = 55;
@@ -172,7 +174,7 @@
             // 
             this.buttonSearch.FlatAppearance.BorderSize = 0;
             this.buttonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSearch.Location = new System.Drawing.Point(588, 80);
+            this.buttonSearch.Location = new System.Drawing.Point(594, 102);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(31, 29);
             this.buttonSearch.TabIndex = 54;
@@ -181,15 +183,16 @@
             // txtKeySearch
             // 
             this.txtKeySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeySearch.Location = new System.Drawing.Point(406, 80);
+            this.txtKeySearch.Location = new System.Drawing.Point(412, 102);
             this.txtKeySearch.Name = "txtKeySearch";
             this.txtKeySearch.Size = new System.Drawing.Size(149, 23);
             this.txtKeySearch.TabIndex = 53;
+            this.txtKeySearch.TextChanged += new System.EventHandler(this.txtKeySearch_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 369);
+            this.label1.Location = new System.Drawing.Point(56, 391);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 79;
@@ -198,7 +201,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(388, 295);
+            this.label2.Location = new System.Drawing.Point(394, 317);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 81;
@@ -206,7 +209,7 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(453, 292);
+            this.txtDiaChi.Location = new System.Drawing.Point(459, 314);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(167, 20);
             this.txtDiaChi.TabIndex = 82;
@@ -214,7 +217,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(388, 329);
+            this.label7.Location = new System.Drawing.Point(394, 351);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 13);
             this.label7.TabIndex = 81;
@@ -222,7 +225,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(520, 326);
+            this.txtPhone.Location = new System.Drawing.Point(526, 348);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 82;
@@ -230,7 +233,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(388, 364);
+            this.label9.Location = new System.Drawing.Point(394, 386);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 13);
             this.label9.TabIndex = 81;
@@ -238,7 +241,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(482, 361);
+            this.txtEmail.Location = new System.Drawing.Point(488, 383);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(138, 20);
             this.txtEmail.TabIndex = 82;
@@ -246,7 +249,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(388, 396);
+            this.label11.Location = new System.Drawing.Point(394, 418);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 13);
             this.label11.TabIndex = 81;
@@ -256,7 +259,7 @@
             // 
             this.cbMaLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMaLop.FormattingEnabled = true;
-            this.cbMaLop.Location = new System.Drawing.Point(453, 393);
+            this.cbMaLop.Location = new System.Drawing.Point(459, 415);
             this.cbMaLop.Name = "cbMaLop";
             this.cbMaLop.Size = new System.Drawing.Size(167, 21);
             this.cbMaLop.TabIndex = 83;
@@ -268,7 +271,7 @@
             this.btnXemDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemDiem.ForeColor = System.Drawing.Color.White;
-            this.btnXemDiem.Location = new System.Drawing.Point(282, 456);
+            this.btnXemDiem.Location = new System.Drawing.Point(288, 478);
             this.btnXemDiem.Name = "btnXemDiem";
             this.btnXemDiem.Size = new System.Drawing.Size(103, 41);
             this.btnXemDiem.TabIndex = 77;
@@ -279,7 +282,7 @@
             // picSearch
             // 
             this.picSearch.Image = ((System.Drawing.Image)(resources.GetObject("picSearch.Image")));
-            this.picSearch.Location = new System.Drawing.Point(572, 68);
+            this.picSearch.Location = new System.Drawing.Point(578, 90);
             this.picSearch.Name = "picSearch";
             this.picSearch.Size = new System.Drawing.Size(46, 41);
             this.picSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,10 +292,31 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(118, 364);
+            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd";
+            this.dateTimePicker1.Location = new System.Drawing.Point(124, 386);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(167, 20);
             this.dateTimePicker1.TabIndex = 85;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(53, 56);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(568, 17);
+            this.label12.TabIndex = 87;
+            this.label12.Text = "______________________________________________________________________";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(52, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 24);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "Danh sách học sinh";
             // 
             // ListStudentForm
             // 
@@ -300,6 +324,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(673, 581);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.picSearch);
             this.Controls.Add(this.cbMaLop);
@@ -360,5 +386,7 @@
         private System.Windows.Forms.Button btnXemDiem;
         private System.Windows.Forms.PictureBox picSearch;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label3;
     }
 }
