@@ -53,7 +53,7 @@ namespace TTNhom
         private void BtnThem_Click(object sender, EventArgs e)
         {
             ten = txtTen.Text.Trim();
-            ngaySinh = dateTimePicker1.Value.ToShortDateString().ToString();
+            ngaySinh = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
             diaChi = txtDiaChi.Text;
             phone = txtPhone.Text;
             email = txtEmail.Text;

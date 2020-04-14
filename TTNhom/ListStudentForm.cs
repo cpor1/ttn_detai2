@@ -107,7 +107,7 @@ namespace TTNhom
         {
             table = new DataTable();
             ten = txtTen.Text.Trim();
-            ngaySinh = dateTimePicker1.Value.ToShortDateString().ToString();
+            ngaySinh = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
             diaChi = txtDiaChi.Text;
             phone = txtPhone.Text;
             email = txtEmail.Text;
