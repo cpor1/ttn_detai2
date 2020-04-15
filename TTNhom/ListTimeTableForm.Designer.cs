@@ -68,10 +68,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.Location = new System.Drawing.Point(49, 32);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 26);
+            this.label3.Size = new System.Drawing.Size(235, 24);
             this.label3.TabIndex = 88;
             this.label3.Text = "Danh sách Thời Khóa Biểu";
             // 
@@ -99,70 +99,70 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 312);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label13.Location = new System.Drawing.Point(27, 321);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(96, 22);
+            this.label13.Size = new System.Drawing.Size(105, 24);
             this.label13.TabIndex = 94;
             this.label13.Text = "Thông tin : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 354);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(46, 357);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 22);
+            this.label1.Size = new System.Drawing.Size(86, 15);
             this.label1.TabIndex = 95;
             this.label1.Text = "Mã giáo viên : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 397);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label2.Location = new System.Drawing.Point(41, 401);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 22);
+            this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 96;
             this.label2.Text = "Mã môn học : ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(341, 354);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label4.Location = new System.Drawing.Point(341, 358);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 22);
+            this.label4.Size = new System.Drawing.Size(77, 15);
             this.label4.TabIndex = 97;
             this.label4.Text = "Mã lớp học : ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(341, 397);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label5.Location = new System.Drawing.Point(341, 402);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 22);
+            this.label5.Size = new System.Drawing.Size(62, 15);
             this.label5.TabIndex = 98;
             this.label5.Text = "Lịch học : ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 436);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label6.Location = new System.Drawing.Point(41, 442);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 22);
+            this.label6.Size = new System.Drawing.Size(88, 15);
             this.label6.TabIndex = 99;
             this.label6.Text = "Ngày bắt đầu : ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(341, 436);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label7.Location = new System.Drawing.Point(341, 442);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 22);
+            this.label7.Size = new System.Drawing.Size(89, 15);
             this.label7.TabIndex = 100;
             this.label7.Text = "Ngày kết thúc : ";
             // 
@@ -176,7 +176,7 @@
             // dateTimePickerStart
             // 
             this.dateTimePickerStart.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePickerStart.Location = new System.Drawing.Point(156, 438);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(156, 442);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
             this.dateTimePickerStart.Size = new System.Drawing.Size(167, 20);
             this.dateTimePickerStart.TabIndex = 102;
@@ -184,14 +184,14 @@
             // dateTimePickerEnd
             // 
             this.dateTimePickerEnd.CustomFormat = "yyyy/MM/dd";
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(454, 438);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(454, 442);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(167, 20);
             this.dateTimePickerEnd.TabIndex = 103;
             // 
             // txtSubjectID
             // 
-            this.txtSubjectID.Location = new System.Drawing.Point(156, 400);
+            this.txtSubjectID.Location = new System.Drawing.Point(156, 401);
             this.txtSubjectID.Name = "txtSubjectID";
             this.txtSubjectID.Size = new System.Drawing.Size(137, 20);
             this.txtSubjectID.TabIndex = 104;
@@ -224,7 +224,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(13, 461);
+            this.label9.Location = new System.Drawing.Point(13, 465);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(616, 17);
             this.label9.TabIndex = 108;
@@ -232,10 +232,10 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.Red;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(83)))), ((int)(((byte)(79)))));
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(418, 513);
             this.btnXoa.Name = "btnXoa";
@@ -247,10 +247,10 @@
             // 
             // btnChiTiet
             // 
-            this.btnChiTiet.BackColor = System.Drawing.Color.Blue;
+            this.btnChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(186)))), ((int)(((byte)(151)))));
             this.btnChiTiet.FlatAppearance.BorderSize = 0;
             this.btnChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChiTiet.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.btnChiTiet.ForeColor = System.Drawing.Color.White;
             this.btnChiTiet.Location = new System.Drawing.Point(278, 513);
             this.btnChiTiet.Name = "btnChiTiet";
@@ -262,10 +262,10 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.Crimson;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(186)))), ((int)(((byte)(151)))));
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Font = new System.Drawing.Font("Palatino Linotype", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Location = new System.Drawing.Point(137, 513);
             this.btnSua.Name = "btnSua";

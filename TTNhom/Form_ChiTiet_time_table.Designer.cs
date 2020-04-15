@@ -63,30 +63,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.Location = new System.Drawing.Point(57, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(301, 26);
+            this.label3.Size = new System.Drawing.Size(294, 24);
             this.label3.TabIndex = 90;
             this.label3.Text = "Thông tin Chi Tiết Thời Khóa Biểu";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label13.Location = new System.Drawing.Point(57, 85);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 22);
+            this.label13.Size = new System.Drawing.Size(150, 20);
             this.label13.TabIndex = 95;
-            this.label13.Text = "Mã Time_Table : ";
+            this.label13.Text = "Mã Thời khóa biểu : ";
             // 
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id.Location = new System.Drawing.Point(213, 82);
+            this.lbl_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_id.Location = new System.Drawing.Point(203, 85);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(37, 26);
+            this.lbl_id.Size = new System.Drawing.Size(29, 20);
             this.lbl_id.TabIndex = 96;
             this.lbl_id.Text = ". . .";
             // 

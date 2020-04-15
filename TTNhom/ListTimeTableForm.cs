@@ -112,8 +112,9 @@ namespace TTNhom
         public ListTimeTableForm()
         {
             InitializeComponent();
-            /*table = new DataTable();
-            GetData("SELECT * FROM dbo.time_table", dataGridViewSchedule, table);*/
+            table = new DataTable();
+            string query = "Select * From time_table";
+            GetData(query, dataGridViewSchedule, table);
         }
 
 
