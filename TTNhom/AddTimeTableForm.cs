@@ -21,11 +21,16 @@ namespace TTNhom
 
         string teacher_id, subject_id, class_id, day_of_the_week, from_date, to_date;
 
-        private void btnThemMoi_Click(object sender, EventArgs e)
+        List<string> list = new List<string>();
+        List<string> list1 = new List<string>();
+        List<string> list2 = new List<string>();
+        public void btnThemMoi_Click(object sender, EventArgs e)
         {
-            teacher_id = txtTeacherID.Text.Trim();
-            subject_id = txtSubjectID.Text;
-            class_id = txtClassID.Text;
+            
+
+            teacher_id = cbID_teacher.Text.ToString();
+            subject_id = cbID_Subject.Text.ToString();
+            class_id = cbID_Class.Text.ToString();
             day_of_the_week = txtDayWeek.Text;
             from_date = dateTimePickerStart.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
             to_date = dateTimePickerEnd.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
@@ -47,6 +52,7 @@ namespace TTNhom
                     "  ( N'" + teacher_id + "' ,'" + subject_id + "' ,'" + class_id + "' ,N'" + day_of_the_week + "' ,N'" + from_date + "' ,N'" + to_date + "' )";
                 cmd = new SqlCommand(queryInsert, conn);
                 cmd.CommandType = CommandType.Text;
+                
                 int i = cmd.ExecuteNonQuery();
                 if (i != 0)
                 {
@@ -60,8 +66,23 @@ namespace TTNhom
         public AddTimeTableForm()
         {
             InitializeComponent();
+            addComboBox(conn, cmd, list, "id", "teachers", cbID_teacher);
+            addComboBox(conn, cmd, list1, "id", "subjects", cbID_Subject);
+            addComboBox(conn, cmd, list2, "id", "classes", cbID_Class);
         }
 
-        
+        private void addComboBox(SqlConnection conn, SqlCommand cmd, List<string> list, string tenCot, string tenTable, ComboBox cb)
+        {
+            conn.Open();
+            cmd = new SqlCommand("Select " + tenCot + " FROM " + tenTable, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                list.Add(dr.GetInt32(0).ToString());
+            }
+            cb.DataSource = list;
+            conn.Close();
+
+        }
     }
 }

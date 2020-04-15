@@ -142,7 +142,7 @@ namespace TTNhom
             }
             else
             {
-                string query = "SELECT * FROM dbo.time_table WHERE id LIKE N'%" + key + "%' ";
+                string query = "SELECT * FROM dbo.time_table WHERE id LIKE N'%" + key + "%' OR day_of_the_week LIKE N'%" + key + "%' ";
                 table = new DataTable();
                 GetData(query, dataGridViewSchedule, table);
             }
