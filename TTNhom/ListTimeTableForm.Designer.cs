@@ -40,11 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTeacherID = new System.Windows.Forms.TextBox();
             this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
-            this.txtSubjectID = new System.Windows.Forms.TextBox();
-            this.txtClassID = new System.Windows.Forms.TextBox();
             this.txtDayWeek = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,6 +49,9 @@
             this.btnChiTiet = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnSearchTKB = new System.Windows.Forms.Button();
+            this.cbID_teacher = new System.Windows.Forms.ComboBox();
+            this.cbID_class = new System.Windows.Forms.ComboBox();
+            this.cbID_subject = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,13 +166,6 @@
             this.label7.TabIndex = 100;
             this.label7.Text = "Ngày kết thúc : ";
             // 
-            // txtTeacherID
-            // 
-            this.txtTeacherID.Location = new System.Drawing.Point(156, 356);
-            this.txtTeacherID.Name = "txtTeacherID";
-            this.txtTeacherID.Size = new System.Drawing.Size(137, 20);
-            this.txtTeacherID.TabIndex = 101;
-            // 
             // dateTimePickerStart
             // 
             this.dateTimePickerStart.CustomFormat = "yyyy/MM/dd";
@@ -188,20 +181,6 @@
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(167, 20);
             this.dateTimePickerEnd.TabIndex = 103;
-            // 
-            // txtSubjectID
-            // 
-            this.txtSubjectID.Location = new System.Drawing.Point(156, 401);
-            this.txtSubjectID.Name = "txtSubjectID";
-            this.txtSubjectID.Size = new System.Drawing.Size(137, 20);
-            this.txtSubjectID.TabIndex = 104;
-            // 
-            // txtClassID
-            // 
-            this.txtClassID.Location = new System.Drawing.Point(454, 357);
-            this.txtClassID.Name = "txtClassID";
-            this.txtClassID.Size = new System.Drawing.Size(137, 20);
-            this.txtClassID.TabIndex = 105;
             // 
             // txtDayWeek
             // 
@@ -286,23 +265,47 @@
             this.btnSearchTKB.UseVisualStyleBackColor = true;
             this.btnSearchTKB.Click += new System.EventHandler(this.btnSearchTKB_Click);
             // 
+            // cbID_teacher
+            // 
+            this.cbID_teacher.FormattingEnabled = true;
+            this.cbID_teacher.Location = new System.Drawing.Point(156, 356);
+            this.cbID_teacher.Name = "cbID_teacher";
+            this.cbID_teacher.Size = new System.Drawing.Size(121, 21);
+            this.cbID_teacher.TabIndex = 112;
+            // 
+            // cbID_class
+            // 
+            this.cbID_class.FormattingEnabled = true;
+            this.cbID_class.Location = new System.Drawing.Point(454, 356);
+            this.cbID_class.Name = "cbID_class";
+            this.cbID_class.Size = new System.Drawing.Size(121, 21);
+            this.cbID_class.TabIndex = 113;
+            // 
+            // cbID_subject
+            // 
+            this.cbID_subject.FormattingEnabled = true;
+            this.cbID_subject.Location = new System.Drawing.Point(156, 401);
+            this.cbID_subject.Name = "cbID_subject";
+            this.cbID_subject.Size = new System.Drawing.Size(121, 21);
+            this.cbID_subject.TabIndex = 114;
+            // 
             // ListTimeTableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(673, 581);
+            this.Controls.Add(this.cbID_subject);
+            this.Controls.Add(this.cbID_class);
+            this.Controls.Add(this.cbID_teacher);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnChiTiet);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtDayWeek);
-            this.Controls.Add(this.txtClassID);
-            this.Controls.Add(this.txtSubjectID);
             this.Controls.Add(this.dateTimePickerEnd);
             this.Controls.Add(this.dateTimePickerStart);
-            this.Controls.Add(this.txtTeacherID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -338,16 +341,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTeacherID;
         private System.Windows.Forms.DateTimePicker dateTimePickerStart;
         private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
-        private System.Windows.Forms.TextBox txtSubjectID;
-        private System.Windows.Forms.TextBox txtClassID;
         private System.Windows.Forms.TextBox txtDayWeek;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnChiTiet;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.ComboBox cbID_teacher;
+        private System.Windows.Forms.ComboBox cbID_class;
+        private System.Windows.Forms.ComboBox cbID_subject;
     }
 }

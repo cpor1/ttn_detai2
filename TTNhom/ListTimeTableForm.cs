@@ -19,6 +19,10 @@ namespace TTNhom
         DBAccess access = new DBAccess();
         DataTable table;
 
+        List<string> list = new List<string>();
+        List<string> list1 = new List<string>();
+        List<string> list2 = new List<string>();
+
         string teacher_id, subject_id, class_id, day_of_the_week, from_date, to_date;
         public static string id_TKB;
         private void btnXoa_Click(object sender, EventArgs e)
@@ -41,9 +45,9 @@ namespace TTNhom
         {
             table = new DataTable();
 
-            teacher_id = txtTeacherID.Text.Trim();
-            subject_id = txtSubjectID.Text;
-            class_id = txtClassID.Text;
+            teacher_id = cbID_teacher.Text.ToString();
+            subject_id = cbID_subject.Text.ToString();
+            class_id = cbID_class.Text.ToString();
             day_of_the_week = txtDayWeek.Text;
             from_date = dateTimePickerStart.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
             to_date = dateTimePickerEnd.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
@@ -96,9 +100,9 @@ namespace TTNhom
             //id_TKB = int.Parse(selectRow.Cells[0].Value.ToString());
 
 
-            txtTeacherID.Text = teacher_id;
-            txtSubjectID.Text = subject_id;
-            txtClassID.Text = class_id;
+            cbID_teacher.Text = teacher_id;
+            cbID_subject.Text = subject_id;
+            cbID_class.Text = class_id;
             txtDayWeek.Text = day_of_the_week;
             dateTimePickerStart.Value = Convert.ToDateTime(from_date);
             dateTimePickerEnd.Value = Convert.ToDateTime(to_date);
@@ -115,6 +119,10 @@ namespace TTNhom
             table = new DataTable();
             string query = "Select * From time_table";
             GetData(query, dataGridViewSchedule, table);
+
+            addComboBox(conn, cmd, list, "id", "teachers", cbID_teacher);
+            addComboBox(conn, cmd, list1, "id", "subjects", cbID_subject);
+            addComboBox(conn, cmd, list2, "id", "classes", cbID_class);
         }
 
 
@@ -146,6 +154,20 @@ namespace TTNhom
                 table = new DataTable();
                 GetData(query, dataGridViewSchedule, table);
             }
+        }
+
+        private void addComboBox(SqlConnection conn, SqlCommand cmd, List<string> list, string tenCot, string tenTable, ComboBox cb)
+        {
+            conn.Open();
+            cmd = new SqlCommand("Select " + tenCot + " FROM " + tenTable, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                list.Add(dr.GetInt32(0).ToString());
+            }
+            cb.DataSource = list;
+            conn.Close();
+
         }
     }
 }
