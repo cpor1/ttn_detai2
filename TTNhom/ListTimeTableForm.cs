@@ -48,30 +48,23 @@ namespace TTNhom
             from_date = dateTimePickerStart.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
             to_date = dateTimePickerEnd.Value.Date.ToString("yyyy-MM-dd HH:mm:ss");
 
-            try
+            if (teacher_id.Equals("") || subject_id.Equals("") || class_id.Equals("") || day_of_the_week.Equals("") || from_date.Equals("") || to_date.Equals(""))
             {
-                if (teacher_id.Equals("") || subject_id.Equals("") || class_id.Equals("") || day_of_the_week.Equals("") || from_date.Equals("") || to_date.Equals(""))
-                {
-                    MessageBox.Show("Thiếu Thông tin !!!");
+                MessageBox.Show("Thiếu Thông tin !!!");
 
-                }
-                else if (dateTimePickerStart.Value > dateTimePickerEnd.Value)
-                {
-                    MessageBox.Show("Nhập sai 'Ngày kết thúc' \n Vui lòng nhập đúng yêu cầu : Ngày kết thúc muộn hơn Ngày bắt đầu.");
-                }
-                else
-                {
-                    string query = "UPDATE dbo.time_table SET " +
-                    "teacher_id = N'" + teacher_id + "' , subject_id = '" + subject_id + "', class_id = '" + class_id + "', day_of_the_week = N'" + day_of_the_week + "', from_date = N'" + from_date + "', to_date = N'" + to_date + "' " +
-                    "WHERE id = '" + id_TKB + "'  ";
-                    GetData(query, dataGridViewSchedule, table);
-                    GetData("select * from dbo.time_table", dataGridViewSchedule, table);
-                    MessageBox.Show("Done");
-                }
             }
-            catch
+            else if (dateTimePickerStart.Value > dateTimePickerEnd.Value)
             {
-                MessageBox.Show("Sai Định Dạng Ngày Tháng !!!");
+                MessageBox.Show("Nhập sai 'Ngày kết thúc' \n Vui lòng nhập đúng yêu cầu : Ngày kết thúc muộn hơn Ngày bắt đầu.");
+            }
+            else
+            {
+                string query = "UPDATE dbo.time_table SET " +
+                "teacher_id = N'" + teacher_id + "' , subject_id = '" + subject_id + "', class_id = '" + class_id + "', day_of_the_week = N'" + day_of_the_week + "', from_date = N'" + from_date + "', to_date = N'" + to_date + "' " +
+                "WHERE id = '" + id_TKB + "'  ";
+                GetData(query, dataGridViewSchedule, table);
+                GetData("select * from dbo.time_table", dataGridViewSchedule, table);
+                MessageBox.Show("Done");
             }
         }
 
