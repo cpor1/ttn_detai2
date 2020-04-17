@@ -58,6 +58,8 @@ namespace TTNhom
                     {
                         MessageBox.Show("Sửa Giao Vien Thanh Cong");
                         conn.Close();
+                        string query = "SELECT * FROM dbo.teachers";
+                        GetData(query, dataGridView1, table);
                     }
                 }
             }
@@ -151,8 +153,8 @@ namespace TTNhom
                 }
                 else
                 {
-                    string query = "SELECT * FROM dbo.students WHERE student_name LIKE N'%" + key + "%' OR address LIKE N'%" + key + "%' " +
-                    "OR parent_phone_number LIKE N'%" + key + "%' OR parent_email LIKE N'%" + key + "%'  ";
+                    string query = "SELECT * FROM dbo.teachers WHERE teacher_name LIKE N'%"+key+"%' OR address LIKE N'%"+key+"%'" +
+                        " OR phone_number LIKE N'%"+key+"%' OR email LIKE N'%"+key+"%' OR major LIKE N'%"+key+"%'";
                     GetData(query, dataGridView1, table);
                 }
 
