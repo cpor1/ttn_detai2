@@ -129,6 +129,8 @@ namespace TTNhom
         {
             InitializeComponent();
         }
+
+        //Button Search
         private void PicSearch_Click(object sender, EventArgs e)
         {
             table = new DataTable();
