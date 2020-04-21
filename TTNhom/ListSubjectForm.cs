@@ -53,6 +53,10 @@ namespace TTNhom {
             else {
                 table = new DataTable();
                 string query1 = "DELETE dbo.subjects WHERE id = " + maMon;
+                string query2 = "UPDATE dbo.student_subject_score SET subject_id = NULL WHERE subject_id = '" + maMon + "'";
+                string query3 = "UPDATE dbo.time_table SET subject_id = NULL WHERE subject_id = '" + maMon + "'";
+                GetData(query2 , tableMon , table);
+                GetData(query3 , tableMon , table);
                 GetData(query1 , tableMon , table);
                 GetData("select * from subjects" , tableMon , table);
                 MessageBox.Show("Done");

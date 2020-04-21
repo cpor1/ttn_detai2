@@ -76,6 +76,11 @@ namespace TTNhom {
             else {
                 table = new DataTable();
                 string query1 = "DELETE dbo.classes WHERE id = " + maLop;
+                string query2 = "UPDATE dbo.time_table SET class_id = NULL WHERE class_id = '" + maLop + "'";
+                string query3 = "UPDATE dbo.students SET class_id = NULL WHERE class_id = '" + maLop + "'";
+
+                GetData(query2 , tableMain , table);
+                GetData(query3 , tableMain , table);
                 GetData(query1 , tableMain , table);
                 GetData("select * from classes" , tableMain , table);
                 MessageBox.Show("Done");

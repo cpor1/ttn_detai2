@@ -81,7 +81,6 @@ namespace TTNhom
                 GetData(query2, dataGridView1, table);
                 GetData("select * from students", dataGridView1, table);
                 MessageBox.Show("Done");
-
             }
             
         }
