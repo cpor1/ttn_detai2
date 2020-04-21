@@ -55,6 +55,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxColumn = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearch)).BeginInit();
@@ -164,7 +165,7 @@
             // labelTimKiem
             // 
             this.labelTimKiem.AutoSize = true;
-            this.labelTimKiem.Location = new System.Drawing.Point(353, 107);
+            this.labelTimKiem.Location = new System.Drawing.Point(227, 106);
             this.labelTimKiem.Name = "labelTimKiem";
             this.labelTimKiem.Size = new System.Drawing.Size(52, 13);
             this.labelTimKiem.TabIndex = 55;
@@ -183,11 +184,11 @@
             // txtKeySearch
             // 
             this.txtKeySearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKeySearch.Location = new System.Drawing.Point(412, 102);
+            this.txtKeySearch.Location = new System.Drawing.Point(286, 101);
             this.txtKeySearch.Name = "txtKeySearch";
             this.txtKeySearch.Size = new System.Drawing.Size(149, 23);
             this.txtKeySearch.TabIndex = 53;
-            this.txtKeySearch.TextChanged += new System.EventHandler(this.txtKeySearch_TextChanged);
+            this.txtKeySearch.TextChanged += new System.EventHandler(this.PicSearch_Click);
             // 
             // label1
             // 
@@ -318,12 +319,32 @@
             this.label3.TabIndex = 86;
             this.label3.Text = "Danh sách học sinh";
             // 
+            // comboBoxColumn
+            // 
+            this.comboBoxColumn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBoxColumn.FormattingEnabled = true;
+            this.comboBoxColumn.Items.AddRange(new object[] {
+            "Mã Học Sinh",
+            "Tên Học Sinh",
+            "Giới Tính",
+            "Ngày Sinh",
+            "Địa Chỉ",
+            "SĐT Phụ Huynh",
+            "Email Phụ Huynh",
+            "Mã Lớp"});
+            this.comboBoxColumn.Location = new System.Drawing.Point(441, 100);
+            this.comboBoxColumn.Name = "comboBoxColumn";
+            this.comboBoxColumn.Size = new System.Drawing.Size(131, 25);
+            this.comboBoxColumn.TabIndex = 88;
+            // 
             // ListStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(673, 581);
+            this.Controls.Add(this.comboBoxColumn);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
@@ -351,6 +372,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListStudentForm";
             this.Text = "ListStudentForm";
+            this.Load += new System.EventHandler(this.ListStudentForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -388,5 +410,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxColumn;
     }
 }

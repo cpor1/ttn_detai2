@@ -22,6 +22,7 @@ namespace TTNhom
         public static int maHS = -1;
         string gioiTinh;
         List<string> list = new List<string>();
+        string query;
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -85,22 +86,9 @@ namespace TTNhom
             
         }
 
-        private void txtKeySearch_TextChanged(object sender, EventArgs e)
+        private void ListStudentForm_Load(object sender, EventArgs e)
         {
-            string key = txtKeySearch.Text;
-            int a;
-            bool check = int.TryParse(key, out a);
-            if (check == true)
-            {
-                string query = "SELECT * FROM dbo.students WHERE  sex = '" + key + "' OR dob LIKE '" + key + "'  OR class_id = '" + key + "' ";
-                GetData(query, dataGridView1, table);
-            }
-            else
-            {
-                string query = "SELECT * FROM dbo.students WHERE student_name LIKE N'%" + key + "%' OR address LIKE N'%" + key + "%' " +
-                "OR parent_phone_number LIKE N'" + key + "' OR parent_email LIKE N'%" + key + "%'  ";
-                GetData(query, dataGridView1, table);
-            }
+            comboBoxColumn.SelectedItem = comboBoxColumn.Items[0];
         }
 
         private void BtnSua_Click(object sender, EventArgs e)
@@ -172,28 +160,56 @@ namespace TTNhom
         private void PicSearch_Click(object sender, EventArgs e)
         {
             table = new DataTable();
-            string key = txtKeySearch.Text.Trim();
-            if (key.Equals(""))
+            string keySearch = comboBoxColumn.Text;
+            string keySearchCompare = txtKeySearch.Text;
+            switch (keySearch)
             {
-                string query = "Select * From students";
-                GetData(query, dataGridView1, table);
-            }
-            else
-            {
-                int a;
-                bool check = int.TryParse(key, out a);
-                if(check == true)
-                {
-                    string query = "SELECT * FROM dbo.students WHERE  sex = '"+key+"' OR dob LIKE '"+key+"'  OR class_id = '"+key+"' ";
-                    GetData(query, dataGridView1, table);
-                }
-                else
-                {
-                    string query = "SELECT * FROM dbo.students WHERE student_name LIKE N'%" + key + "%' OR address LIKE N'%" + key + "%' " +
-                    "OR parent_phone_number LIKE N'%" + key + "%' OR parent_email LIKE N'%" + key + "%'  ";
-                    GetData(query, dataGridView1, table);
-                }
-                
+                case ("Mã Học Sinh"):
+                    {
+                        
+                        GetData("select * from students where id like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("Tên Học Sinh"):
+                    {
+                        GetData("select * from students where student_name like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("Giới Tính"):
+                    {
+                        GetData("select * from students where sex like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("Ngày Sinh"):
+                    {
+                        GetData("select * from students where dob like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("Địa Chỉ"):
+                    {
+                        GetData("select * from students where address like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("SĐT Phụ Huynh"):
+                    {
+                        GetData("select * from students where parent_phone_number like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("Email Phụ Huynh"):
+                    {
+                        GetData("select * from students where parent_email like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case ("Mã Lớp"):
+                    {
+                        GetData("select * from students where class_id like N'%" + keySearchCompare + "%' ", dataGridView1, table);
+                        break;
+                    }
+                case (""):
+                    {
+                        GetData("select * from students ", dataGridView1, table);
+                        break;
+                    }
             }
         }
     }
