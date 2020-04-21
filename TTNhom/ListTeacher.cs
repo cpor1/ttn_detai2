@@ -19,7 +19,7 @@ namespace TTNhom
         DBAccess access = new DBAccess();
         DataTable table;
         string ten, ngaySinh, diaChi, phone, email, monHoc, luong, gioiTinh;
-
+        public static int maGV = -1;
         private void btnSua_Click(object sender, EventArgs e)
         {
             table = new DataTable();
@@ -117,7 +117,6 @@ namespace TTNhom
             else radioButtonNu.Checked = true;
         }
 
-        public static int maGV = -1;
         private void GetData(string query, DataGridView grid, DataTable table)
         {
             access.createConn();
@@ -148,13 +147,13 @@ namespace TTNhom
                 bool check = int.TryParse(key, out a);
                 if (check == true)
                 {
-                    string query = "SELECT* FROM dbo.teachers WHERE salary = '"+key+"' OR id = '"+key+"' OR dob LIKE '%"+key+"%'";
+                    string query = "SELECT* FROM dbo.teachers WHERE salary = '"+key+"' OR id = '"+key+"' OR dob LIKE '%"+key+ "%'OR phone_number LIKE N'%" + key + "%' ";
                     GetData(query, dataGridView1, table);
                 }
                 else
                 {
                     string query = "SELECT * FROM dbo.teachers WHERE teacher_name LIKE N'%"+key+"%' OR address LIKE N'%"+key+"%'" +
-                        " OR phone_number LIKE N'%"+key+"%' OR email LIKE N'%"+key+"%' OR major LIKE N'%"+key+"%'";
+                        "OR email LIKE N'%"+key+"%' OR major LIKE N'%"+key+"%'";
                     GetData(query, dataGridView1, table);
                 }
 
