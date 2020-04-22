@@ -60,7 +60,7 @@ namespace TTNhom
             else
             {
                 FormDiem f = new FormDiem();
-                f.Show();
+                f.ShowDialog();
             }
             
 
