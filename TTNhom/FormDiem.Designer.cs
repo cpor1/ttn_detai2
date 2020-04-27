@@ -154,54 +154,54 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(628, 243);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.Size = new System.Drawing.Size(45, 13);
             this.label6.TabIndex = 83;
-            this.label6.Text = "grade";
+            this.label6.Text = "Xếp loại";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(629, 199);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 84;
-            this.label5.Text = "final_test_score";
+            this.label5.Text = "Điểm cuối kì";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(628, 154);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 13);
+            this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 85;
-            this.label4.Text = "middle_test_score";
+            this.label4.Text = "Điểm giữa kì";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(628, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 86;
-            this.label3.Text = "first_test_score";
+            this.label3.Text = "Điểm 15\'";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(628, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 87;
-            this.label2.Text = "subject_ID";
+            this.label2.Text = "Mã môn";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(628, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 88;
-            this.label1.Text = "student_ID";
+            this.label1.Text = "Mã học sinh";
             // 
             // FormDiem
             // 
